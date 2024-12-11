@@ -1,6 +1,6 @@
-import { FindAllPermissionRequestDto, CreateSpaceEventRulePreApprovePermissionRequestDto, CreateSpaceRuleChangePermissionRequestDto, CreateSpaceEventPermissionRequestDto, CancelPermissionRequestDto, DropPermissionRequestDto } from "permission-engine/src/api/permission-request/dto";
+import { FindAllPermissionRequestDto, CreateSpaceEventRulePreApprovePermissionRequestDto, CreateSpaceRuleChangePermissionRequestDto, CreateSpaceEventPermissionRequestDto, CancelPermissionRequestDto, DropPermissionRequestDto } from "../permission-engine/src/api/permission-request/dto";
 import { ApiClient } from "./api-client";
-import { PermissionRequest } from "permission-engine/src/database/entity/permission-request.entity";
+import { PermissionRequest } from "../permission-engine/src/database/entity/permission-request.entity";
 export declare class PermissionRequestService {
     private apiClient;
     constructor(apiClient: ApiClient);
