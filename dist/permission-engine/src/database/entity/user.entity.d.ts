@@ -1,0 +1,34 @@
+import { UserNotification } from './user-notification.entity';
+import { SpaceEvent } from './space-event.entity';
+import { ExternalService } from './external-service.entity';
+import { RuleBlock } from './rule-block.entity';
+import { Rule } from './rule.entity';
+import { SpacePermissioner } from './space-permissioner.entity';
+import { Topic } from './topic.entity';
+import { SpaceHistory } from './space-history.entity';
+export declare class User {
+    id: string;
+    name: string;
+    email: string;
+    isActive: boolean;
+    isSubscribe: boolean;
+    type: 'individual' | 'organization' | 'government';
+    birthYear: number;
+    country: string;
+    region: string;
+    city: string;
+    district: string;
+    details: string;
+    image: string;
+    createdAt: Date;
+    updatedAt: Date;
+    userNotifications: UserNotification[];
+    spaceEvents: SpaceEvent[];
+    externalServices: ExternalService[];
+    rules: Rule[];
+    ruleBlocks: RuleBlock[];
+    spacePermissioners: SpacePermissioner[];
+    spacePermissionerInviters: SpacePermissioner[];
+    spaceHistories: SpaceHistory[];
+    topics: Topic[];
+}

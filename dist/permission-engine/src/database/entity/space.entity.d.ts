@@ -1,0 +1,38 @@
+import { SpaceEvent } from './space-event.entity';
+import { User } from './user.entity';
+import { Rule } from './rule.entity';
+import { PermissionRequest } from './permission-request.entity';
+import { SpacePermissioner } from './space-permissioner.entity';
+import { SpaceImage } from './space-image.entity';
+import { SpaceApprovedRule } from './space-approved-rule.entity';
+import { SpaceTopic } from './space-topic.entity';
+import { SpaceHistory } from './space-history.entity';
+export declare class Space {
+    id: string;
+    name: string;
+    owner: User;
+    ownerId: string;
+    zipcode: string;
+    country: string;
+    region: string;
+    city: string;
+    district: string;
+    address: string;
+    latitude: string;
+    longitude: string;
+    isActive: boolean;
+    rule: Rule;
+    ruleId: string;
+    details: string;
+    link: string;
+    timezone: string;
+    createdAt: Date;
+    updatedAt: Date;
+    spaceImages: SpaceImage[];
+    spaceTopics: SpaceTopic[];
+    spaceApprovedRules: SpaceApprovedRule[];
+    spaceEvents: SpaceEvent[];
+    permissionRequests: PermissionRequest[];
+    spacePermissioners: SpacePermissioner[];
+    spaceHistories: SpaceHistory[];
+}

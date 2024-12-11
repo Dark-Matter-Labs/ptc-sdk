@@ -1,0 +1,72 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSpaceEventReportDto = void 0;
+const swagger_1 = require("@nestjs/swagger");
+const class_validator_1 = require("class-validator");
+const type_1 = require("../../../lib/type");
+class UpdateSpaceEventReportDto {
+}
+exports.UpdateSpaceEventReportDto = UpdateSpaceEventReportDto;
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(0),
+    (0, swagger_1.ApiProperty)({
+        description: 'SpaceEvent report attendee count',
+    }),
+    __metadata("design:type", Number)
+], UpdateSpaceEventReportDto.prototype, "attendeeCount", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(1),
+    (0, class_validator_1.Max)(10),
+    (0, swagger_1.ApiProperty)({
+        description: type_1.SpaceEventReportQuestion.spaceSuitability,
+    }),
+    __metadata("design:type", Number)
+], UpdateSpaceEventReportDto.prototype, "spaceSuitability", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.Min)(1),
+    (0, class_validator_1.Max)(10),
+    (0, swagger_1.ApiProperty)({
+        description: type_1.SpaceEventReportQuestion.spaceSatisfaction,
+    }),
+    __metadata("design:type", Number)
+], UpdateSpaceEventReportDto.prototype, "spaceSatisfaction", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
+    (0, swagger_1.ApiProperty)({
+        description: type_1.SpaceEventReportQuestion.eventGoal,
+    }),
+    __metadata("design:type", String)
+], UpdateSpaceEventReportDto.prototype, "eventGoal", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
+    (0, swagger_1.ApiProperty)({
+        description: type_1.SpaceEventReportQuestion.spaceIssue,
+    }),
+    __metadata("design:type", String)
+], UpdateSpaceEventReportDto.prototype, "spaceIssue", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
+    (0, swagger_1.ApiProperty)({
+        description: type_1.SpaceEventReportQuestion.spaceSuggestions,
+    }),
+    __metadata("design:type", String)
+], UpdateSpaceEventReportDto.prototype, "spaceSuggestions", void 0);
+//# sourceMappingURL=update-space-event-report.dto.js.map

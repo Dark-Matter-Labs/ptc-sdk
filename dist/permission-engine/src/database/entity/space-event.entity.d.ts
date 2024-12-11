@@ -1,0 +1,38 @@
+import { User } from './user.entity';
+import { Space } from './space.entity';
+import { Topic } from './topic.entity';
+import { SpaceEventStatus } from '../../lib/type';
+import { Rule } from './rule.entity';
+import { PermissionRequest } from './permission-request.entity';
+import { ExternalService } from './external-service.entity';
+import { SpaceEventImage } from './space-event-image.entity';
+import { SpaceHistory } from './space-history.entity';
+export declare class SpaceEvent {
+    id: string;
+    name: string;
+    organizer: User;
+    organizerId: string;
+    space: Space;
+    spaceId: string;
+    rule: Rule;
+    ruleId: string;
+    permissionRequestId: string;
+    externalService: ExternalService;
+    externalServiceId: string;
+    status: SpaceEventStatus;
+    details: string;
+    isActive: boolean;
+    link: string;
+    callbackLink: string;
+    attendeeCount: number;
+    report: Record<string, any>;
+    duration: string;
+    startsAt: Date;
+    endsAt: Date;
+    createdAt: Date;
+    updatedAt: Date;
+    permissionRequests: PermissionRequest[];
+    spaceEventImages: SpaceEventImage[];
+    topics: Topic[];
+    spaceHistories: SpaceHistory[];
+}

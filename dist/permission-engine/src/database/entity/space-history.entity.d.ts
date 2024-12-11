@@ -1,0 +1,31 @@
+import { SpaceHistoryType } from '../../lib/type';
+import { Space } from './space.entity';
+import { Rule } from './rule.entity';
+import { SpacePermissioner } from './space-permissioner.entity';
+import { SpaceEvent } from './space-event.entity';
+import { PermissionRequest } from './permission-request.entity';
+import { User } from './user.entity';
+export declare class SpaceHistory {
+    id: string;
+    space: Space;
+    spaceId: string;
+    rule: Rule;
+    ruleId: string;
+    logger: User;
+    loggerId: string;
+    spaceHistoryId: string;
+    parentHistory: SpaceHistory;
+    childHistories: SpaceHistory[];
+    spacePermissioner: SpacePermissioner;
+    spacePermissionerId: string;
+    spaceEvent: SpaceEvent;
+    spaceEventId: string;
+    permissionRequest: PermissionRequest;
+    permissionRequestId: string;
+    isPublic: boolean;
+    type: SpaceHistoryType;
+    title: string;
+    details: string;
+    image: string;
+    createdAt: Date;
+}

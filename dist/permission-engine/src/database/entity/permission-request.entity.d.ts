@@ -1,0 +1,30 @@
+import { PermissionProcessType, PermissionRequestResolveStatus, PermissionRequestStatus } from '../../lib/type';
+import { Rule } from './rule.entity';
+import { SpaceEvent } from './space-event.entity';
+import { Space } from './space.entity';
+import { PermissionResponse } from './permission-response.entity';
+import { SpaceApprovedRule } from './space-approved-rule.entity';
+import { SpaceHistory } from './space-history.entity';
+export declare class PermissionRequest {
+    id: string;
+    user: Space;
+    userId: string;
+    space: Space;
+    spaceId: string;
+    spaceEvent: SpaceEvent;
+    spaceEventId: string;
+    spaceRule: Rule;
+    spaceRuleId: string;
+    spaceEventRule: Rule;
+    spaceEventRuleId: string;
+    status: PermissionRequestStatus;
+    processType: PermissionProcessType;
+    resolveStatus: PermissionRequestResolveStatus;
+    permissionCode: string;
+    resolveDetails: string;
+    createdAt: Date;
+    updatedAt: Date;
+    permissionResponses: PermissionResponse[];
+    spaceApprovedRules: SpaceApprovedRule[];
+    spaceHistories: SpaceHistory[];
+}

@@ -1,0 +1,31 @@
+import { User } from './user.entity';
+import { RuleTarget } from '../../lib/type';
+import { SpaceEvent } from './space-event.entity';
+import { Space } from './space.entity';
+import { RuleBlock } from './rule-block.entity';
+import { PermissionRequest } from './permission-request.entity';
+import { Topic } from './topic.entity';
+import { SpaceApprovedRule } from './space-approved-rule.entity';
+import { SpaceHistory } from './space-history.entity';
+export declare class Rule {
+    id: string;
+    name: string;
+    hash: string;
+    publicHash: string;
+    author: User;
+    authorId: string;
+    parentRule: Rule;
+    childRules: Rule[];
+    parentRuleId: string;
+    target: RuleTarget;
+    isActive: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+    spaces: Space[];
+    spaceEvents: SpaceEvent[];
+    spaceApprovedRules: SpaceApprovedRule[];
+    ruleBlocks: RuleBlock[];
+    topics: Topic[];
+    permissionRequests: PermissionRequest[];
+    spaceHistories: SpaceHistory[];
+}
