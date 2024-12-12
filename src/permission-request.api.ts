@@ -9,7 +9,7 @@ import {
 import { ApiClient } from "./api-client";
 import { PermissionRequest } from "../permission-engine/src/database/entity/permission-request.entity";
 
-export class PermissionRequestService {
+export class PermissionRequestAPI {
   constructor(private apiClient: ApiClient) {}
 
   async findAll(
@@ -31,7 +31,7 @@ export class PermissionRequestService {
     );
   }
 
-  async findOne(id: string) {
+  async findOneById(id: string) {
     return this.apiClient.get<PermissionRequest>(`/permission/request/:id`, {
       id,
     });
