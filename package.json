@@ -16,7 +16,7 @@
     "PermissionEngine"
   ],
   "author": "Donghun Ohn",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "description": "",
   "devDependencies": {
     "@types/express": "^5.0.0",
