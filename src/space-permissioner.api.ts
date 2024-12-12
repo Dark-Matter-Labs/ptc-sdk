@@ -1,9 +1,9 @@
 import {
   FindAllSpacePermissionerByUserIdDto,
   InviteSpacePermissionerDto,
-} from "permission-engine/src/api/space-permissioner/dto";
-import { SpacePermissioner } from "permission-engine/src/database/entity/space-permissioner.entity";
-import { PaginationDto } from "permission-engine/src/lib/dto";
+} from "../permission-engine/src/api/space-permissioner/dto";
+import { SpacePermissioner } from "../permission-engine/src/database/entity/space-permissioner.entity";
+import { PaginationDto } from "../permission-engine/src/lib/dto";
 import { ApiClient } from "./api-client";
 
 export class SpacePermissionerAPI {

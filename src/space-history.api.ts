@@ -1,5 +1,5 @@
-import { FindAllSpaceHistoryDto, FindAllIssueSpaceHistoryDto } from "permission-engine/src/api/space-history/dto";
-import { SpaceHistory } from "permission-engine/src/database/entity/space-history.entity";
+import { FindAllSpaceHistoryDto, FindAllIssueSpaceHistoryDto } from "../permission-engine/src/api/space-history/dto";
+import { SpaceHistory } from "../permission-engine/src/database/entity/space-history.entity";
 import { ApiClient } from "./api-client";
 
 export class SpaceHistoryAPI {

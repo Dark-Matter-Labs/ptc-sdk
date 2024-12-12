@@ -1,12 +1,12 @@
 import { ApiClient } from "./api-client";
-import { Space } from "permission-engine/src/database/entity/space.entity";
-import { SpaceEquipment } from "permission-engine/src/database/entity/space-equipment.entity";
+import { Space } from "../permission-engine/src/database/entity/space.entity";
+import { SpaceEquipment } from "../permission-engine/src/database/entity/space-equipment.entity";
 import {
   CreateSpaceEquipmentDto,
   FindAllSpaceEquipmentDto,
   FindAllSpaceFacilityDto,
   UpdateSpaceEquipmentDto,
-} from "permission-engine/src/api/space-equipment/dto";
+} from "../permission-engine/src/api/space-equipment/dto";
 
 export class SpaceEquipmentAPI {
   constructor(private apiClient: ApiClient) {}

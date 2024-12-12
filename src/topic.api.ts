@@ -1,5 +1,5 @@
-import { FindAllTopicDto } from "permission-engine/src/api/topic/dto";
-import { Topic } from "permission-engine/src/database/entity/topic.entity";
+import { FindAllTopicDto } from "../permission-engine/src/api/topic/dto";
+import { Topic } from "../permission-engine/src/database/entity/topic.entity";
 import { ApiClient } from "./api-client";
 
 export class TopicAPI {

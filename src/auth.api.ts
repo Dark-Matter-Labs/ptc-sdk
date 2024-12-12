@@ -1,6 +1,4 @@
-import { UpdateUserDto } from "permission-engine/src/api/user/dto";
 import { ApiClient } from "./api-client";
-import { User } from "permission-engine/src/database/entity/user.entity";
 
 export class AuthAPI {
   constructor(private apiClient: ApiClient) {}

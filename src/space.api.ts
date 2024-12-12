@@ -8,15 +8,15 @@ import {
   ResolveSpaceIssueDto,
   FindAllMatchedRuleDto,
   FindSpaceAvailabilityDto,
-} from "permission-engine/src/api/space/dto";
+} from "../permission-engine/src/api/space/dto";
 import { ApiClient } from "./api-client";
-import { Space } from "permission-engine/src/database/entity/space.entity";
+import { Space } from "../permission-engine/src/database/entity/space.entity";
 import {
   SpaceAvailability,
   SpaceImageType,
-} from "permission-engine/src/lib/type";
-import { SpaceImage } from "permission-engine/src/database/entity/space-image.entity";
-import { SpaceHistory } from "permission-engine/src/database/entity/space-history.entity";
+} from "../permission-engine/src/lib/type";
+import { SpaceImage } from "../permission-engine/src/database/entity/space-image.entity";
+import { SpaceHistory } from "../permission-engine/src/database/entity/space-history.entity";
 
 export class SpaceAPI {
   constructor(private apiClient: ApiClient) {}
