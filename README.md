@@ -3,7 +3,7 @@
 ## Install package
 
 ```bash
-npm install ptc-sdk
+npm install @dark-matter-labs/ptc-sdk
 ```
 
 ## How to use
