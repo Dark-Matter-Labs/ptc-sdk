@@ -1,6 +1,6 @@
-import { Rule } from "permission-engine/src/database/entity/rule.entity";
+import { Rule } from "../permission-engine/src/database/entity/rule.entity";
 import { ApiClient } from "./api-client";
-import { CreateRuleDto, FindAllRuleDto, ForkRuleDto, UpdateRuleDto } from "permission-engine/src/api/rule/dto";
+import { CreateRuleDto, FindAllRuleDto, ForkRuleDto, UpdateRuleDto } from "../permission-engine/src/api/rule/dto";
 export declare class RuleAPI {
     private apiClient;
     constructor(apiClient: ApiClient);

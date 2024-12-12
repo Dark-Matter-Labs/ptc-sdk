@@ -1,6 +1,6 @@
-import { UpdateUserDto } from "permission-engine/src/api/user/dto";
+import { UpdateUserDto } from "../permission-engine/src/api/user/dto";
 import { ApiClient } from "./api-client";
-import { User } from "permission-engine/src/database/entity/user.entity";
+import { User } from "../permission-engine/src/database/entity/user.entity";
 export declare class UserAPI {
     private apiClient;
     constructor(apiClient: ApiClient);

@@ -1,10 +1,10 @@
-import { FindAllSpaceEventDto, CreateSpaceEventDto, UpdateSpaceEventDto, CompleteSpaceEventDto, CompleteWithIssueResolvedSpaceEventDto, CompleteWithIssueSpaceEventDto, SetSpaceEventImageDto, UpdateSpaceEventAdditionalInfoDto, UpdateSpaceEventReportDto } from "permission-engine/src/api/space-event/dto";
-import { SpaceEvent } from "permission-engine/src/database/entity/space-event.entity";
+import { FindAllSpaceEventDto, CreateSpaceEventDto, UpdateSpaceEventDto, CompleteSpaceEventDto, CompleteWithIssueResolvedSpaceEventDto, CompleteWithIssueSpaceEventDto, SetSpaceEventImageDto, UpdateSpaceEventAdditionalInfoDto, UpdateSpaceEventReportDto } from "../permission-engine/src/api/space-event/dto";
+import { SpaceEvent } from "../permission-engine/src/database/entity/space-event.entity";
 import { ApiClient } from "./api-client";
-import { RuleBlock } from "permission-engine/src/database/entity/rule-block.entity";
-import { SpaceHistory } from "permission-engine/src/database/entity/space-history.entity";
-import { SpaceEventImage } from "permission-engine/src/database/entity/space-event-image.entity";
-import { SpaceEventImageType } from "permission-engine/src/lib/type";
+import { RuleBlock } from "../permission-engine/src/database/entity/rule-block.entity";
+import { SpaceHistory } from "../permission-engine/src/database/entity/space-history.entity";
+import { SpaceEventImage } from "../permission-engine/src/database/entity/space-event-image.entity";
+import { SpaceEventImageType } from "../permission-engine/src/lib/type";
 export declare class SpaceEventAPI {
     private apiClient;
     constructor(apiClient: ApiClient);

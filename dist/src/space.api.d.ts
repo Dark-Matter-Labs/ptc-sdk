@@ -1,9 +1,9 @@
-import { FindAllSpaceDto, CreateSpaceDto, UpdateSpaceDto, SetSpaceImageDto, ReportSpaceIssueDto, VolunteerSpaceIssueResolveDto, ResolveSpaceIssueDto, FindAllMatchedRuleDto, FindSpaceAvailabilityDto } from "permission-engine/src/api/space/dto";
+import { FindAllSpaceDto, CreateSpaceDto, UpdateSpaceDto, SetSpaceImageDto, ReportSpaceIssueDto, VolunteerSpaceIssueResolveDto, ResolveSpaceIssueDto, FindAllMatchedRuleDto, FindSpaceAvailabilityDto } from "../permission-engine/src/api/space/dto";
 import { ApiClient } from "./api-client";
-import { Space } from "permission-engine/src/database/entity/space.entity";
-import { SpaceAvailability, SpaceImageType } from "permission-engine/src/lib/type";
-import { SpaceImage } from "permission-engine/src/database/entity/space-image.entity";
-import { SpaceHistory } from "permission-engine/src/database/entity/space-history.entity";
+import { Space } from "../permission-engine/src/database/entity/space.entity";
+import { SpaceAvailability, SpaceImageType } from "../permission-engine/src/lib/type";
+import { SpaceImage } from "../permission-engine/src/database/entity/space-image.entity";
+import { SpaceHistory } from "../permission-engine/src/database/entity/space-history.entity";
 export declare class SpaceAPI {
     private apiClient;
     constructor(apiClient: ApiClient);

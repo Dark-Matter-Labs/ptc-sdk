@@ -1,5 +1,5 @@
-import { FindAllRuleBlockDto, CreateRuleBlockDto } from "permission-engine/src/api/rule-block/dto";
-import { RuleBlock } from "permission-engine/src/database/entity/rule-block.entity";
+import { FindAllRuleBlockDto, CreateRuleBlockDto } from "../permission-engine/src/api/rule-block/dto";
+import { RuleBlock } from "../permission-engine/src/database/entity/rule-block.entity";
 import { ApiClient } from "./api-client";
 export declare class RuleBlockAPI {
     private apiClient;
