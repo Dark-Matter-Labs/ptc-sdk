@@ -17,7 +17,15 @@
   ],
   "author": "Donghun Ohn",
   "license": "GPL-3.0-only",
-  "description": "",
+  "description": "SDK for Permissioning the City Permission Engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dark-Matter-Labs/ptc-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dark-Matter-Labs/ptc-sdk/issues"
+  },
+  "homepage": "https://github.com/Dark-Matter-Labs/ptc-sdk",
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
