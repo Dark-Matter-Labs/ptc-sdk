@@ -26,9 +26,9 @@ export class ReportSpaceIssueDto {
   details: string;
 
   @IsNotEmpty()
-  @IsBoolean()
   @ApiProperty({
     description: 'SpaceHistory is public or not',
+    type: 'boolean',
     required: true,
   })
   isPublic: boolean;
