@@ -4,7 +4,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "husky"
   },
   "keywords": [
     "Permissioning the City",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
+    "husky": "^9.1.7",
     "typescript": "^5.7.2"
   },
   "dependencies": {
@@ -43,9 +45,9 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "dayjs-abbr-timezone": "^1.0.0",
-    "typeorm": "^0.3.20",
     "multer": "^1.4.5-lts.1",
     "multer-s3": "^3.0.1",
+    "typeorm": "^0.3.20",
     "typeorm-naming-strategies": "^4.1.0"
   }
 }
