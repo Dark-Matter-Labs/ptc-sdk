@@ -35,9 +35,9 @@ __decorate([
 ], ReportSpaceIssueDto.prototype, "details", void 0);
 __decorate([
     (0, class_validator_1.IsNotEmpty)(),
-    (0, class_validator_1.IsBoolean)(),
     (0, swagger_1.ApiProperty)({
         description: 'SpaceHistory is public or not',
+        type: 'boolean',
         required: true,
     }),
     __metadata("design:type", Boolean)

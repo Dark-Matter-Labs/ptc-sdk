@@ -31,6 +31,7 @@ __decorate([
     (0, class_transformer_1.Transform)(({ value }) => (Array.isArray(value) ? value : value.split(','))),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsUUID)('4', { each: true }),
+    (0, swagger_1.ApiHideProperty)(),
     __metadata("design:type", Array)
 ], FindAllPermissionResponseDto.prototype, "spacePermissionerIds", void 0);
 __decorate([
