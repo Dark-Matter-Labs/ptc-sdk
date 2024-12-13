@@ -101,7 +101,9 @@ export class ApiClient {
       const response = await fetch(url, {
         method: method,
         headers: isFormData
-          ? {} // Let the browser set the Content-Type for FormData
+          ? {
+              Accept: "*/*",
+            } // Let the browser set the Content-Type for FormData
           : { "Content-Type": "application/json" },
         body: isFormData ? body : JSON.stringify(body), // Send FormData directly or JSON string
         credentials: "include",
