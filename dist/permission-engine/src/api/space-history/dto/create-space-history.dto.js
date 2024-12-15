@@ -115,13 +115,4 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], CreateSpaceHistoryDto.prototype, "details", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
-    (0, swagger_1.ApiPropertyOptional)({
-        description: 'SpaceHistory image',
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CreateSpaceHistoryDto.prototype, "image", void 0);
 //# sourceMappingURL=create-space-history.dto.js.map

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DayOfWeek = exports.SpaceEventImageType = exports.SpaceImageType = exports.SpaceHistoryType = exports.SpaceEventReportQuestion = exports.PermissionProcessType = exports.PermissionRequestTarget = exports.PermissionResponseStatus = exports.RuleType = exports.UserNotificationTemplateName = exports.UserNotificationStatus = exports.UserNotificationType = exports.UserNotificationTarget = exports.UserType = exports.PermissionRequestResolveStatus = exports.PermissionRequestStatus = exports.SpaceEquipmentType = exports.SpaceEventAccessType = exports.NoiseLevel = exports.RuleBlockContentDivider = exports.RuleBlockType = exports.SpaceEventRuleSortBy = exports.SpaceApprovedRuleSortBy = exports.TimeSortBy = exports.SpaceEventStatus = exports.RuleTarget = exports.SesComplaintFeedbackType = exports.SesBounceSubType = exports.SesBounceType = exports.Language = void 0;
+exports.DayOfWeek = exports.SpaceEventImageType = exports.SpaceImageType = exports.SpaceHistoryTaskStatus = exports.SpaceHistoryType = exports.SpaceEventReportQuestion = exports.PermissionProcessType = exports.PermissionRequestTarget = exports.PermissionResponseStatus = exports.RuleType = exports.UserNotificationTemplateName = exports.UserNotificationStatus = exports.UserNotificationType = exports.UserNotificationTarget = exports.UserType = exports.PermissionRequestResolveStatus = exports.PermissionRequestStatus = exports.SpaceEquipmentType = exports.SpaceEventAccessType = exports.NoiseLevel = exports.RuleBlockContentDivider = exports.RuleBlockType = exports.SpaceEventRuleSortBy = exports.SpaceApprovedRuleSortBy = exports.TimeSortBy = exports.SpaceEventStatus = exports.RuleTarget = exports.SesComplaintFeedbackType = exports.SesBounceSubType = exports.SesBounceType = exports.Language = void 0;
 var Language;
 (function (Language) {
     Language["en"] = "en";
@@ -579,10 +579,13 @@ var SpaceHistoryType;
     SpaceHistoryType["spaceIssue"] = "space_issue";
     SpaceHistoryType["spaceIssueResolveVolunteer"] = "space_issue_resolve_volunteer";
     SpaceHistoryType["spaceIssueResolveVolunteerFull"] = "space_issue_resolve_volunteer_full";
-    SpaceHistoryType["spaceIssueResolveTask"] = "space_issue_resolve_task";
-    SpaceHistoryType["spaceIssueResolveTaskComplete"] = "space_issue_resolve_task_complete";
     SpaceHistoryType["spaceIssueResolve"] = "space_issue_resolve";
 })(SpaceHistoryType || (exports.SpaceHistoryType = SpaceHistoryType = {}));
+var SpaceHistoryTaskStatus;
+(function (SpaceHistoryTaskStatus) {
+    SpaceHistoryTaskStatus["pending"] = "pending";
+    SpaceHistoryTaskStatus["resolved"] = "resolved";
+})(SpaceHistoryTaskStatus || (exports.SpaceHistoryTaskStatus = SpaceHistoryTaskStatus = {}));
 var SpaceImageType;
 (function (SpaceImageType) {
     SpaceImageType["list"] = "list";

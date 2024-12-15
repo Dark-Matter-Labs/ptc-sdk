@@ -1,6 +1,5 @@
-export declare class ReportSpaceIssueDto {
+export declare class AddSpaceHistoryTaskDto {
     title?: string;
     details: string;
-    isPublic: boolean;
     images?: Express.Multer.File[];
 }

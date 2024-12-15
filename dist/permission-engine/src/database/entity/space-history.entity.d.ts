@@ -5,6 +5,8 @@ import { SpacePermissioner } from './space-permissioner.entity';
 import { SpaceEvent } from './space-event.entity';
 import { PermissionRequest } from './permission-request.entity';
 import { User } from './user.entity';
+import { SpaceHistoryImage } from './space-history-image.entity';
+import { SpaceHistoryTask } from './space-history-task.entity';
 export declare class SpaceHistory {
     id: string;
     space: Space;
@@ -26,6 +28,7 @@ export declare class SpaceHistory {
     type: SpaceHistoryType;
     title: string;
     details: string;
-    image: string;
+    spaceHistoryImages: SpaceHistoryImage[];
+    spaceHistoryTasks: SpaceHistoryTask[];
     createdAt: Date;
 }

@@ -9,52 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReportSpaceIssueDto = void 0;
+exports.CreateSpaceHistoryTaskImageDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
-class ReportSpaceIssueDto {
+class CreateSpaceHistoryTaskImageDto {
 }
-exports.ReportSpaceIssueDto = ReportSpaceIssueDto;
+exports.CreateSpaceHistoryTaskImageDto = CreateSpaceHistoryTaskImageDto;
 __decorate([
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
-    (0, swagger_1.ApiPropertyOptional)({
-        description: 'SpaceHistory title',
+    (0, class_validator_1.IsUUID)('4'),
+    (0, swagger_1.ApiProperty)({
+        description: 'SpaceHistoryTaskImage id in uuid',
         nullable: true,
     }),
     __metadata("design:type", String)
-], ReportSpaceIssueDto.prototype, "title", void 0);
+], CreateSpaceHistoryTaskImageDto.prototype, "id", void 0);
 __decorate([
     (0, class_validator_1.IsNotEmpty)(),
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsUUID)('4'),
     (0, swagger_1.ApiProperty)({
-        description: 'SpaceHistory details',
+        description: 'SpaceHistoryTaskImage spaceHistoryTaskId in uuid',
         required: true,
     }),
     __metadata("design:type", String)
-], ReportSpaceIssueDto.prototype, "details", void 0);
+], CreateSpaceHistoryTaskImageDto.prototype, "spaceHistoryTaskId", void 0);
 __decorate([
-    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
     (0, swagger_1.ApiProperty)({
-        description: 'SpaceHistory is public or not',
-        type: 'boolean',
+        description: 'SpaceHistoryTaskImage link',
         required: true,
     }),
-    __metadata("design:type", Boolean)
-], ReportSpaceIssueDto.prototype, "isPublic", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsArray)(),
-    (0, class_validator_1.ArrayMaxSize)(5),
-    (0, swagger_1.ApiPropertyOptional)({
-        description: 'SpaceHistory image in jpeg|jpg|png|gif|heic|webp',
-        type: 'array',
-        items: {
-            type: 'string',
-            format: 'binary',
-        },
-        maxItems: 5,
-    }),
-    __metadata("design:type", Array)
-], ReportSpaceIssueDto.prototype, "images", void 0);
-//# sourceMappingURL=report-space-issue.dto.js.map
+    __metadata("design:type", String)
+], CreateSpaceHistoryTaskImageDto.prototype, "link", void 0);
+//# sourceMappingURL=create-space-history-task-image.dto.js.map

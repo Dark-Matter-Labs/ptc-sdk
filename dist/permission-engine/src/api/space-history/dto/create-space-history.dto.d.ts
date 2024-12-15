@@ -11,5 +11,4 @@ export declare class CreateSpaceHistoryDto {
     type: SpaceHistoryType;
     title?: string;
     details?: string;
-    image?: string;
 }

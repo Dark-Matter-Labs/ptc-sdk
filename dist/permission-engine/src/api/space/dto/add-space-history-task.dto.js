@@ -9,45 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReportSpaceIssueDto = void 0;
+exports.AddSpaceHistoryTaskDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
-class ReportSpaceIssueDto {
+class AddSpaceHistoryTaskDto {
 }
-exports.ReportSpaceIssueDto = ReportSpaceIssueDto;
+exports.AddSpaceHistoryTaskDto = AddSpaceHistoryTaskDto;
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     (0, swagger_1.ApiPropertyOptional)({
-        description: 'SpaceHistory title',
+        description: 'SpaceHistoryTask title',
         nullable: true,
     }),
     __metadata("design:type", String)
-], ReportSpaceIssueDto.prototype, "title", void 0);
+], AddSpaceHistoryTaskDto.prototype, "title", void 0);
 __decorate([
     (0, class_validator_1.IsNotEmpty)(),
     (0, class_validator_1.IsString)(),
     (0, swagger_1.ApiProperty)({
-        description: 'SpaceHistory details',
+        description: 'SpaceHistoryTask details',
         required: true,
     }),
     __metadata("design:type", String)
-], ReportSpaceIssueDto.prototype, "details", void 0);
-__decorate([
-    (0, class_validator_1.IsNotEmpty)(),
-    (0, swagger_1.ApiProperty)({
-        description: 'SpaceHistory is public or not',
-        type: 'boolean',
-        required: true,
-    }),
-    __metadata("design:type", Boolean)
-], ReportSpaceIssueDto.prototype, "isPublic", void 0);
+], AddSpaceHistoryTaskDto.prototype, "details", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.ArrayMaxSize)(5),
     (0, swagger_1.ApiPropertyOptional)({
-        description: 'SpaceHistory image in jpeg|jpg|png|gif|heic|webp',
+        description: 'SpaceHistoryTask image in jpeg|jpg|png|gif|heic|webp',
         type: 'array',
         items: {
             type: 'string',
@@ -56,5 +47,5 @@ __decorate([
         maxItems: 5,
     }),
     __metadata("design:type", Array)
-], ReportSpaceIssueDto.prototype, "images", void 0);
-//# sourceMappingURL=report-space-issue.dto.js.map
+], AddSpaceHistoryTaskDto.prototype, "images", void 0);
+//# sourceMappingURL=add-space-history-task.dto.js.map

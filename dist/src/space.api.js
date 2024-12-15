@@ -40,8 +40,17 @@ class SpaceAPI {
     async volunteerIssueResolve(id, dto) {
         return this.apiClient.post(`/space/:id/issue/volunteer`, { id }, dto);
     }
+    async markIssueResolveVolunteerFull(id, dto) {
+        return this.apiClient.post(`/space/:id/issue/volunteer/full`, { id }, dto);
+    }
     async resolveIssue(id, dto) {
         return this.apiClient.post(`/space/:id/issue/resolve`, { id }, dto);
+    }
+    async addSpaceHistoryTask(id, spaceHistoryId, dto) {
+        return this.apiClient.post(`/space/:id/issue/:spaceHistoryId/task`, { id, spaceHistoryId }, dto);
+    }
+    async resolveSpaceHistoryTask(id, spaceHistoryId, spaceHistoryTaskId, dto) {
+        return this.apiClient.post(`:id/issue/:spaceHistoryId/task/:spaceHistoryTaskId/resolve`, { id, spaceHistoryId, spaceHistoryTaskId }, dto);
     }
 }
 exports.SpaceAPI = SpaceAPI;

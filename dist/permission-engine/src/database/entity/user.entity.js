@@ -20,6 +20,7 @@ const rule_entity_1 = require("./rule.entity");
 const space_permissioner_entity_1 = require("./space-permissioner.entity");
 const topic_entity_1 = require("./topic.entity");
 const space_history_entity_1 = require("./space-history.entity");
+const space_history_task_entity_1 = require("./space-history-task.entity");
 let User = class User {
 };
 exports.User = User;
@@ -128,6 +129,14 @@ __decorate([
     (0, typeorm_1.OneToMany)(() => space_permissioner_entity_1.SpacePermissioner, (spacePermissioner) => spacePermissioner.inviter),
     __metadata("design:type", Array)
 ], User.prototype, "spacePermissionerInviters", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => space_history_task_entity_1.SpaceHistoryTask, (spaceHistoryTask) => spaceHistoryTask.creator),
+    __metadata("design:type", Array)
+], User.prototype, "spaceHistoryTaskCreators", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => space_history_task_entity_1.SpaceHistoryTask, (spaceHistoryTask) => spaceHistoryTask.resolver),
+    __metadata("design:type", Array)
+], User.prototype, "spaceHistoryTaskResolvers", void 0);
 __decorate([
     (0, typeorm_1.OneToMany)(() => space_history_entity_1.SpaceHistory, (spacehistory) => spacehistory.logger),
     __metadata("design:type", Array)

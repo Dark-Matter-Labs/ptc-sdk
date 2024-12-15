@@ -19,6 +19,8 @@ const space_permissioner_entity_1 = require("./space-permissioner.entity");
 const space_event_entity_1 = require("./space-event.entity");
 const permission_request_entity_1 = require("./permission-request.entity");
 const user_entity_1 = require("./user.entity");
+const space_history_image_entity_1 = require("./space-history-image.entity");
+const space_history_task_entity_1 = require("./space-history-task.entity");
 let SpaceHistory = class SpaceHistory {
 };
 exports.SpaceHistory = SpaceHistory;
@@ -125,10 +127,13 @@ __decorate([
     __metadata("design:type", String)
 ], SpaceHistory.prototype, "details", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    (0, swagger_1.ApiProperty)({ description: 'SpaceHistory image' }),
-    __metadata("design:type", String)
-], SpaceHistory.prototype, "image", void 0);
+    (0, typeorm_1.OneToMany)(() => space_history_image_entity_1.SpaceHistoryImage, (spaceHistoryImage) => spaceHistoryImage.spaceHistory),
+    __metadata("design:type", Array)
+], SpaceHistory.prototype, "spaceHistoryImages", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => space_history_task_entity_1.SpaceHistoryTask, (spaceHistoryTask) => spaceHistoryTask.spaceHistory),
+    __metadata("design:type", Array)
+], SpaceHistory.prototype, "spaceHistoryTasks", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     (0, swagger_1.ApiProperty)({ description: 'Created timestamp' }),

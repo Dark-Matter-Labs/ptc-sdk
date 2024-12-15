@@ -6,6 +6,7 @@ import { Rule } from './rule.entity';
 import { SpacePermissioner } from './space-permissioner.entity';
 import { Topic } from './topic.entity';
 import { SpaceHistory } from './space-history.entity';
+import { SpaceHistoryTask } from './space-history-task.entity';
 export declare class User {
     id: string;
     name: string;
@@ -29,6 +30,8 @@ export declare class User {
     ruleBlocks: RuleBlock[];
     spacePermissioners: SpacePermissioner[];
     spacePermissionerInviters: SpacePermissioner[];
+    spaceHistoryTaskCreators: SpaceHistoryTask[];
+    spaceHistoryTaskResolvers: SpaceHistoryTask[];
     spaceHistories: SpaceHistory[];
     topics: Topic[];
 }
