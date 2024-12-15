@@ -8,6 +8,9 @@ import {
   ResolveSpaceIssueDto,
   FindAllMatchedRuleDto,
   FindSpaceAvailabilityDto,
+  MarkIssueResolveVolunteerFullDto,
+  AddSpaceHistoryTaskDto,
+  ResolveSpaceHistoryTaskDto,
 } from "../permission-engine/src/api/space/dto";
 import { ApiClient } from "./api-client";
 import { Space } from "../permission-engine/src/database/entity/space.entity";
@@ -17,6 +20,7 @@ import {
 } from "../permission-engine/src/lib/type";
 import { SpaceImage } from "../permission-engine/src/database/entity/space-image.entity";
 import { SpaceHistory } from "../permission-engine/src/database/entity/space-history.entity";
+import { SpaceHistoryTask } from "permission-engine/src/database/entity/space-history-task.entity";
 
 export class SpaceAPI {
   constructor(private apiClient: ApiClient) {}
@@ -101,10 +105,49 @@ export class SpaceAPI {
     );
   }
 
+  async markIssueResolveVolunteerFull(
+    id: string,
+    dto: MarkIssueResolveVolunteerFullDto
+  ) {
+    return this.apiClient.post<MarkIssueResolveVolunteerFullDto, SpaceHistory>(
+      `/space/:id/issue/volunteer/full`,
+      { id },
+      dto
+    );
+  }
+
   async resolveIssue(id: string, dto: ResolveSpaceIssueDto) {
     return this.apiClient.post<ResolveSpaceIssueDto, SpaceHistory>(
       `/space/:id/issue/resolve`,
       { id },
+      dto
+    );
+  }
+
+  async addSpaceHistoryTask(
+    id: string,
+    spaceHistoryId: string,
+    dto: AddSpaceHistoryTaskDto
+  ) {
+    return this.apiClient.post<AddSpaceHistoryTaskDto, SpaceHistoryTask>(
+      `/space/:id/issue/:spaceHistoryId/task`,
+      { id, spaceHistoryId },
+      dto
+    );
+  }
+
+  async resolveSpaceHistoryTask(
+    id: string,
+    spaceHistoryId: string,
+    spaceHistoryTaskId: string,
+    dto: ResolveSpaceHistoryTaskDto
+  ) {
+    return this.apiClient.post<
+      ResolveSpaceHistoryTaskDto,
+      { data: { result: boolean } }
+    >(
+      `:id/issue/:spaceHistoryId/task/:spaceHistoryTaskId/resolve`,
+      { id, spaceHistoryId, spaceHistoryTaskId },
       dto
     );
   }
