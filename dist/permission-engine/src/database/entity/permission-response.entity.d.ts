@@ -1,6 +1,6 @@
 import { PermissionRequest } from './permission-request.entity';
 import { SpacePermissioner } from './space-permissioner.entity';
-import { PermissionResponseStatus } from '../../lib/type';
+import { PermissionResponseStatus, PermissionResponseVoteHistoryItem } from '../../lib/type';
 export declare class PermissionResponse {
     id: string;
     permissionRequest: PermissionRequest;
@@ -11,6 +11,7 @@ export declare class PermissionResponse {
     conditions: string[];
     excitements: string[];
     worries: string[];
+    voteHistory: PermissionResponseVoteHistoryItem[];
     timeoutAt: Date;
     createdAt: Date;
     updatedAt: Date;

@@ -68,6 +68,10 @@ __decorate([
     __metadata("design:type", Array)
 ], PermissionResponse.prototype, "worries", void 0);
 __decorate([
+    (0, typeorm_1.Column)('jsonb', { nullable: true }),
+    __metadata("design:type", Array)
+], PermissionResponse.prototype, "voteHistory", void 0);
+__decorate([
     (0, typeorm_1.Column)(),
     (0, swagger_1.ApiProperty)({ description: 'Timeout timestamp' }),
     __metadata("design:type", Date)

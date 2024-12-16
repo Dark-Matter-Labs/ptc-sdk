@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DayOfWeek = exports.SpaceEventImageType = exports.SpaceImageType = exports.SpaceHistoryTaskStatus = exports.SpaceHistoryType = exports.SpaceEventReportQuestion = exports.PermissionProcessType = exports.PermissionRequestTarget = exports.PermissionResponseStatus = exports.RuleType = exports.UserNotificationTemplateName = exports.UserNotificationStatus = exports.UserNotificationType = exports.UserNotificationTarget = exports.UserType = exports.PermissionRequestResolveStatus = exports.PermissionRequestStatus = exports.SpaceEquipmentType = exports.SpaceEventAccessType = exports.NoiseLevel = exports.RuleBlockContentDivider = exports.RuleBlockType = exports.SpaceEventRuleSortBy = exports.SpaceApprovedRuleSortBy = exports.TimeSortBy = exports.SpaceEventStatus = exports.RuleTarget = exports.SesComplaintFeedbackType = exports.SesBounceSubType = exports.SesBounceType = exports.Language = void 0;
+exports.DayOfWeek = exports.SpaceEventImageType = exports.SpaceImageType = exports.SpaceHistoryTaskStatus = exports.SpaceHistoryType = exports.SpaceEventReportQuestion = exports.PermissionProcessType = exports.PermissionRequestTarget = exports.PermissionResponseVoteDecision = exports.PermissionResponseStatus = exports.RuleType = exports.UserNotificationTemplateName = exports.UserNotificationStatus = exports.UserNotificationType = exports.UserNotificationTarget = exports.UserType = exports.PermissionRequestResolveStatus = exports.PermissionRequestStatus = exports.SpaceEquipmentType = exports.SpaceEventAccessType = exports.NoiseLevel = exports.RuleBlockContentDivider = exports.RuleBlockType = exports.SpaceEventRuleSortBy = exports.SpaceApprovedRuleSortBy = exports.TimeSortBy = exports.SpaceEventStatus = exports.RuleTarget = exports.SesComplaintFeedbackType = exports.SesBounceSubType = exports.SesBounceType = exports.Language = void 0;
 var Language;
 (function (Language) {
     Language["en"] = "en";
@@ -550,6 +550,13 @@ var PermissionResponseStatus;
     PermissionResponseStatus["abstention"] = "abstention";
     PermissionResponseStatus["timeout"] = "timeout";
 })(PermissionResponseStatus || (exports.PermissionResponseStatus = PermissionResponseStatus = {}));
+var PermissionResponseVoteDecision;
+(function (PermissionResponseVoteDecision) {
+    PermissionResponseVoteDecision["approved"] = "approved";
+    PermissionResponseVoteDecision["approvedWithCondition"] = "approved_with_condition";
+    PermissionResponseVoteDecision["rejected"] = "rejected";
+    PermissionResponseVoteDecision["abstention"] = "abstention";
+})(PermissionResponseVoteDecision || (exports.PermissionResponseVoteDecision = PermissionResponseVoteDecision = {}));
 var PermissionRequestTarget;
 (function (PermissionRequestTarget) {
     PermissionRequestTarget["spaceEvent"] = "space-event";

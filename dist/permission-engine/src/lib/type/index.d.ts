@@ -589,6 +589,16 @@ export declare enum PermissionResponseStatus {
     abstention = "abstention",
     timeout = "timeout"
 }
+export declare enum PermissionResponseVoteDecision {
+    approved = "approved",
+    approvedWithCondition = "approved_with_condition",
+    rejected = "rejected",
+    abstention = "abstention"
+}
+export type PermissionResponseVoteHistoryItem = {
+    decision: PermissionResponseVoteDecision;
+    timestamp: Date;
+};
 export type IpLocationInfo = {
     status: string;
     country: string;
