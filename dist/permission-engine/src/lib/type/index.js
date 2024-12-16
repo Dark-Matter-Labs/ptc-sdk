@@ -172,6 +172,11 @@ var RuleBlockType;
      */
     RuleBlockType["spaceCancelDeadline"] = "space:cancel_deadline";
     /**
+     * [Required] RuleBlock for community members
+     * content: markdown
+     */
+    RuleBlockType["spaceJoinCommunity"] = "space:join_community";
+    /**
      * SpaceEvent: rule blocks for event rules
      * [Required] required rule block type
      * [Optional] optional rule block type
