@@ -117,6 +117,11 @@ var RuleBlockType;
      */
     RuleBlockType["spaceConsentMethod"] = "space:consent_method";
     /**
+     * [Optional] Consent quorum in percent to make descisions
+     * content: number between 1 to 100
+     */
+    RuleBlockType["spaceConsentQuorum"] = "space:consent_quorum";
+    /**
      * [Required] Consent timeout for space permissioners
      * content: {number}{d|h}
      */

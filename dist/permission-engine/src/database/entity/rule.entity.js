@@ -80,6 +80,11 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Rule.prototype, "isActive", void 0);
 __decorate([
+    (0, typeorm_1.Column)(),
+    (0, swagger_1.ApiProperty)({ description: 'Rule details' }),
+    __metadata("design:type", String)
+], Rule.prototype, "details", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     (0, swagger_1.ApiProperty)({ description: 'Created timestamp' }),
     __metadata("design:type", Date)

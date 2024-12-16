@@ -19,6 +19,7 @@ export declare class Rule {
     parentRuleId: string;
     target: RuleTarget;
     isActive: boolean;
+    details: string;
     createdAt: Date;
     updatedAt: Date;
     spaces: Space[];

@@ -40,6 +40,15 @@ __decorate([
 ], CreateRuleDto.prototype, "target", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    (0, swagger_1.ApiPropertyOptional)({
+        description: 'Rule details',
+        nullable: true,
+    }),
+    __metadata("design:type", String)
+], CreateRuleDto.prototype, "details", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsUUID)('4', { each: true }),
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.ArrayMinSize)(0),
