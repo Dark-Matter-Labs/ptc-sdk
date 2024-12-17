@@ -9,7 +9,10 @@ export declare class SpacePermissionerAPI {
         data: SpacePermissioner[];
         total: number;
     }>;
-    findSelf(dto: FindAllSpacePermissionerByUserIdDto): Promise<SpacePermissioner>;
+    findSelf(dto: FindAllSpacePermissionerByUserIdDto): Promise<{
+        data: SpacePermissioner[];
+        total: number;
+    }>;
     invite(spaceId: string, dto: InviteSpacePermissionerDto): Promise<SpacePermissioner>;
     join(spaceId: string, dto: JoinSpacePermissionerDto): Promise<SpacePermissioner>;
     leave(spaceId: string): Promise<{
