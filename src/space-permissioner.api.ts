@@ -22,7 +22,11 @@ export class SpacePermissionerAPI {
   }
 
   async findSelf(dto: FindAllSpacePermissionerByUserIdDto) {
-    return this.apiClient.get<SpacePermissioner>(`/permissioner/self`, {}, dto);
+    return this.apiClient.get<{ data: SpacePermissioner[]; total: number }>(
+      `/permissioner/self`,
+      {},
+      dto
+    );
   }
 
   async invite(
