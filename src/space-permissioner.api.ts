@@ -1,6 +1,7 @@
 import {
   FindAllSpacePermissionerByUserIdDto,
   InviteSpacePermissionerDto,
+  JoinSpacePermissionerDto,
 } from "../permission-engine/src/api/space-permissioner/dto";
 import { SpacePermissioner } from "../permission-engine/src/database/entity/space-permissioner.entity";
 import { PaginationDto } from "../permission-engine/src/lib/dto";
@@ -35,10 +36,14 @@ export class SpacePermissionerAPI {
     );
   }
 
-  async join(spaceId: string): Promise<SpacePermissioner> {
-    return this.apiClient.post<null, SpacePermissioner>(
+  async join(
+    spaceId: string,
+    dto: JoinSpacePermissionerDto
+  ): Promise<SpacePermissioner> {
+    return this.apiClient.post<JoinSpacePermissionerDto, SpacePermissioner>(
       `/permissioner/:spaceId/join`,
-      { spaceId }
+      { spaceId },
+      dto
     );
   }
 
