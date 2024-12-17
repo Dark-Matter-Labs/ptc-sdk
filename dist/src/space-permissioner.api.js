@@ -14,8 +14,8 @@ class SpacePermissionerAPI {
     async invite(spaceId, dto) {
         return this.apiClient.post(`/permissioner/:spaceId/invite`, { spaceId }, dto);
     }
-    async join(spaceId) {
-        return this.apiClient.post(`/permissioner/:spaceId/join`, { spaceId });
+    async join(spaceId, dto) {
+        return this.apiClient.post(`/permissioner/:spaceId/join`, { spaceId }, dto);
     }
     async leave(spaceId) {
         return this.apiClient.post(`/permissioner/:spaceId/leave`, { spaceId });
