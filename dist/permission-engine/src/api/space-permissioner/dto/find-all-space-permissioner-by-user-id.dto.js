@@ -24,4 +24,13 @@ __decorate([
     }),
     __metadata("design:type", Boolean)
 ], FindAllSpacePermissionerByUserIdDto.prototype, "isActive", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    (0, swagger_1.ApiPropertyOptional)({
+        description: 'SpacePermissioner spaceId',
+        type: 'string',
+    }),
+    __metadata("design:type", String)
+], FindAllSpacePermissionerByUserIdDto.prototype, "spaceId", void 0);
 //# sourceMappingURL=find-all-space-permissioner-by-user-id.dto.js.map
