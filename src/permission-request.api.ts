@@ -42,7 +42,7 @@ export class PermissionRequestAPI {
   ) {
     return this.apiClient.post<
       CreateSpaceEventRulePreApprovePermissionRequestDto,
-      PermissionRequest
+      { permissionRequest: PermissionRequest; result: boolean }
     >(`/permission/request/pre-approve`, {}, dto);
   }
 
@@ -51,14 +51,14 @@ export class PermissionRequestAPI {
   ) {
     return this.apiClient.post<
       CreateSpaceRuleChangePermissionRequestDto,
-      PermissionRequest
+      { permissionRequest: PermissionRequest; result: boolean }
     >(`/permission/request/rule-change`, {}, dto);
   }
 
   async spaceEventPermissionRequest(dto: CreateSpaceEventPermissionRequestDto) {
     return this.apiClient.post<
       CreateSpaceEventPermissionRequestDto,
-      PermissionRequest
+      { permissionRequest: PermissionRequest; result: boolean }
     >(`/permission/request/event`, {}, dto);
   }
 
