@@ -52,8 +52,8 @@ export class TopicAPI {
     );
   }
 
-  async findOneById(id: string): Promise<{ data: Topic[]; total: number }> {
-    return this.apiClient.get<{ data: Topic[]; total: number }>(`/topic/:id`, {
+  async findOneById(id: string): Promise<Topic> {
+    return this.apiClient.get<Topic>(`/topic/:id`, {
       id,
     });
   }
