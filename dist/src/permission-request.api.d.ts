@@ -10,9 +10,18 @@ export declare class PermissionRequestAPI {
     }>;
     findOneByPermissionCode(permissionCode: string): Promise<PermissionRequest>;
     findOneById(id: string): Promise<PermissionRequest>;
-    spaceEventRulePreApprovePermissionRequest(dto: CreateSpaceEventRulePreApprovePermissionRequestDto): Promise<PermissionRequest>;
-    spaceRuleChangePermissionRequest(dto: CreateSpaceRuleChangePermissionRequestDto): Promise<PermissionRequest>;
-    spaceEventPermissionRequest(dto: CreateSpaceEventPermissionRequestDto): Promise<PermissionRequest>;
+    spaceEventRulePreApprovePermissionRequest(dto: CreateSpaceEventRulePreApprovePermissionRequestDto): Promise<{
+        permissionRequest: PermissionRequest;
+        result: boolean;
+    }>;
+    spaceRuleChangePermissionRequest(dto: CreateSpaceRuleChangePermissionRequestDto): Promise<{
+        permissionRequest: PermissionRequest;
+        result: boolean;
+    }>;
+    spaceEventPermissionRequest(dto: CreateSpaceEventPermissionRequestDto): Promise<{
+        permissionRequest: PermissionRequest;
+        result: boolean;
+    }>;
     cancel(id: string, dto: CancelPermissionRequestDto): Promise<PermissionRequest>;
     accept(id: string): Promise<PermissionRequest>;
     drop(id: string, dto: DropPermissionRequestDto): Promise<PermissionRequest>;
