@@ -24,8 +24,5 @@ export declare class TopicAPI {
         data: Topic[];
         total: number;
     }>;
-    findOneById(id: string): Promise<{
-        data: Topic[];
-        total: number;
-    }>;
+    findOneById(id: string): Promise<Topic>;
 }
